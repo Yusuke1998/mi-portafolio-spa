@@ -10,7 +10,26 @@
           <div class="content-column-content">
             
             <h4>Mis redes sociales:</h4>
-            <p class="social social--big"><a href="#" title="" class="facebook"><i class="fa fa-facebook"></i></a><a href="#" title="" class="twitter"><i class="fa fa-twitter"></i></a><a href="#" title="" class="gplus"><i class="fa fa-google-plus"></i></a><a href="#" title="" class="instagram"><i class="fa fa-instagram"></i></a><a href="#" title="" class="email"><i class="fa fa-envelope"></i></a></p>
+            <p class="social social--big">
+              <a href="#" title="" class="facebook">
+                <i class="fa fa-facebook"></i>
+              </a>
+              <a href="#" title="" class="twitter">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a href="#" title="" class="gplus">
+                <i class="fa fa-google-plus"></i>
+              </a>
+              <a href="#" title="" class="instagram">
+                <i class="fa fa-instagram"></i>
+              </a>
+              <a href="#" title="" class="email">
+                <i class="fa fa-envelope"></i>
+              </a>
+              <a href="#" title="" class="github">
+                <i class="fa fa-github"></i>
+              </a>
+            </p>
             <h4>Formulario de contacto</h4>
             <form id="contact-form" method="post" action="#" class="contact-form form">
               <div class="controls">
