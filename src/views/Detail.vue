@@ -8,7 +8,9 @@
       <div class="row">
         <div class="col-xl-10">
           <div class="content-column-content">
-            <h1>Prototypes of an mobile app for Vodafone</h1>
+            <detalle />
+            <p v-text="maria.tex"></p>
+
             <p class="lead">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
             <div id="main-slider" class="owl-carousel owl-theme">
               <div class="item"><img src="img/slider/3.jpg" alt="" class="img-fluid"></div>
@@ -38,3 +40,17 @@
     </div>
 	<!--   *** DETAIL END ***-->
 </template>
+<script>
+  import detalle from "@/components/Detalle.vue";
+
+  export default{
+    components:{
+      detalle
+    },
+    data(){
+      return{
+        maria: {'tex':'Maria mi amor'}
+      }
+    }
+  }
+</script>

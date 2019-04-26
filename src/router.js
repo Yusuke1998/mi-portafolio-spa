@@ -28,7 +28,7 @@ export default new Router({
       component: Contact
     },
     {
-      path: '/detail',
+      path: '/detail/:id',
       name: 'detail',
       component: Detail
     }

@@ -46,7 +46,7 @@
                   </a>
                 </p>
 
-                <div class="copyright text-center text-md-center">
+                <div class="copyright text-left text-md-left">
                   <p class="credit">&copy;2019 <br>Jhonny Prz | Yusuke1998</p>
                   <p class="credit">Template by <a href="http://bootstrapious.com/portfolio-themes" target="_blank" class="external">Bootstrapious.com</a></p>
                 </div>

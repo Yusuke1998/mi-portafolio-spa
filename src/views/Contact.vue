@@ -56,7 +56,7 @@
                   <textarea rows="4" name="message" id="message" required="required" class="form-control"></textarea>
                 </div>
                 <div>
-                  <input type="submit" value="Enviar" class="btn btn-outline-primary">
+                  <input type="submit" value="Enviar" class="btn btn-outline-primary btn-block">
                 </div>
               </div>
             </form>
