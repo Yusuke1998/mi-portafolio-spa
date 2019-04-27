@@ -21,29 +21,30 @@
                     </li>
                 </ul>
                 <h1 class="sidebar-heading"> <a href="#">Jhonny Pérez</a></h1>
-                <p class="sidebar-p text-justify">Venezolano, estudiante y programador.</p>
-                <p class="sidebar-p text-left">
-                  Estudiante eterno de las nuevas tecnologias, amante de php y su excelente framework laravel.
-                </p>
+                <p class="sidebar-p text-left" v-text="text1"></p>
+                <p class="sidebar-p text-left" v-text="text2"></p>
                 <p class="social">
-                  <a href="#" data-animate-hover="pulse" class="external facebook">
+                  <a target="_blank" v-bind:href="redes.facebook" data-animate-hover="pulse" class="external facebook">
                     <i class="fa fa-facebook"></i>
                   </a>
-                  <a href="#" data-animate-hover="pulse" class="external gplus">
-                    <i class="fa fa-google-plus"></i>
+                  <a target="_blank" v-bind:href="redes.youtube" data-animate-hover="pulse" class="external gplus">
+                    <i class="fa fa-youtube" aria-hidden="true"></i>
                   </a>
-                  <a href="#" data-animate-hover="pulse" class="external twitter">
+                  <a target="_blank" v-bind:href="redes.twitter" data-animate-hover="pulse" class="external twitter">
                     <i class="fa fa-twitter"></i>
                   </a>
-                  <a href="#" title="" class="external instagram">
+                  <a target="_blank" v-bind:href="redes.instagram" title="" class="external instagram">
                     <i class="fa fa-instagram"></i>
                   </a>
-                  <a href="#" data-animate-hover="pulse" class="email">
+                  <a target="_blank" href="#" @click.prevent="show()" data-animate-hover="pulse" class="email">
                     <i class="fa fa-envelope"></i>
                   </a>
-                  <a href="#" data-animate-hover="pulse" class="github">
+                  <a target="_blank" v-bind:href="redes.github" data-animate-hover="pulse" class="github">
                     <i class="fa fa-github" aria-hidden="true"></i>
                   </a>
+                </p>
+                <p v-if="showEmail">
+                  {{ redes.correo }}
                 </p>
 
                 <div class="copyright text-left text-md-left">
@@ -59,3 +60,32 @@
     </div>
   </div>
 </template>
+<script>
+  export default{
+    data(){
+      return{
+        text1:'Venezolano, estudiante y programador.',
+        text2:'Estudiante eterno de las nuevas tecnologias, amante de php y su excelente framework laravel.',
+        showEmail:false,
+        redes:{
+          github:'https://github.com/Yusuke1998',
+          facebook:'https://www.facebook.com/jhonnyprz1998',
+          twitter:'https://twitter.com/yusukeJJPM',
+          youtube:'https://www.youtube.com/channel/UCR8Qv82YEtiXwkwLV-og13g?view_as=subscriber',
+          correo:'jhonnyjose1998@gmail.com',
+          instagram:'https://www.instagram.com/przjhonny/'
+        }
+      }
+    },
+    methods:{
+        show(){
+          if (this.showEmail) {
+            this.showEmail = false;
+          }else{
+            this.showEmail = true;
+          }
+        }
+    }
+  }
+
+</script>

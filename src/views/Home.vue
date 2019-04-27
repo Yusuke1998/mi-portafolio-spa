@@ -3,7 +3,7 @@
     <div class="col-md-8 col-lg-9 content-column">
       <div class="small-navbar d-flex d-md-none">
         <button type="button" data-toggle="offcanvas" class="btn btn-outline-primary"> <i class="fa fa-align-left mr-2"></i>Menu</button>
-        <h1 class="small-navbar-heading"> <a href="index.html">Jhonny Pérez </a></h1>
+        <h1 class="small-navbar-heading"> <a href="#">Jhonny Pérez </a></h1>
       </div>
       <div class="grid row">
           <div class="col-md-6 col-lg-3 grid-item" v-for="item in proyectos"> 

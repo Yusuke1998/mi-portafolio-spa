@@ -26,7 +26,7 @@
 		    </div>
 	      </div>
 	      <div class="col-md-4">
-	        <p><img v-bind:src="foto" alt="This is me" class="image rounded-circle img-fluid"></p>
+	        <p><img v-bind:src="foto" alt="Este soy yo!" class="image rounded-circle img-fluid"></p>
 	      </div>
 	    </div>
 	    <h4 class="text-uppercase">Education</h4>
@@ -47,7 +47,7 @@
 				yo:'Jhonny Pérez',
 				descripcion:'Estudiante de ing en informatica, fanatico de la electronica y del buen cine. Me gusta el dinero y me gusta programar, por suerte van de la mano.',
 				actualidad:"Estudio en la Universidad Nacional Experimental Romulo Gallegos, la carrera de ingenieria en informatica y actualmente me desempeño ahi como programador para la direccion de informatica. Apoyando las diferentes areas de estudio en tanto me sea posible , al mismo tiempo aparto un tiempo para trabajos freelance por medio de sitios como Workana, o uno que otro 'tigrito' que sale por ahi xD.",
-				foto:'../dist/plantilla/img/profile.jpg',
+				foto:'/profile.jpg',
 				conocimientos:{
 					php:{'titulo':'PHP','porcentaje':'80'},
 					js:{'titulo':'JAVASCRIPT','porcentaje':'70'},
