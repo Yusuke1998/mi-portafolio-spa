@@ -12,6 +12,15 @@ import store from './store'
  import './assets/plantilla/css/custom.css'
  // fin styles
 
+  // import jquery from '../node_modules/jquery/dist/jquery.min.js';
+  // let $ = jquery;
+
+  // $(function(){
+  //   $('[data-toggle="offcanvas"]').click(function () {
+  //      $('.row-offcanvas').toggleClass('active');
+  //   });
+  // });
+
 Vue.config.productionTip = false
 
 new Vue({
@@ -20,14 +29,3 @@ new Vue({
   render: h => h(App)
 }).$mount('#app')
 
-// Control de menu desplegable
-global.jQuery = require('jquery');
-var $ = global.jQuery;
-window.$ = $;
-
-$(document).ready(function () {
-     $('[data-toggle="offcanvas"]').click(function () {
-         $('.row-offcanvas').toggleClass('active')
-     });
-});
-// Control de menu desplegable

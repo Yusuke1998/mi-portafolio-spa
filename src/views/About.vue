@@ -1,10 +1,6 @@
 <template>
 	<!--   *** ABOUT ***-->  	
 	<div class="col-md-8 col-lg-9 content-column white-background">
-	<div class="small-navbar d-flex d-md-none">
-	<button type="button" data-toggle="offcanvas" class="btn btn-outline-primary"> <i class="fa fa-align-left mr-2"></i>Menu</button>
-	<h1 class="small-navbar-heading"><a href="#" v-text="yo"></a></h1>
-	</div>
 	<div class="row">
 	<div class="col-xl-10">
 	  <div class="content-column-content">
@@ -40,7 +36,7 @@
 	<!--   *** ABOUT END ***-->  	
 </template>
 
-<script>
+<script>	
 	export default{
 		data(){
 			return {
@@ -49,19 +45,20 @@
 				actualidad:"Estudio en la Universidad Nacional Experimental Romulo Gallegos, la carrera de ingenieria en informatica y actualmente me desempeño ahi como programador para la direccion de informatica. Apoyando las diferentes areas de estudio en tanto me sea posible , al mismo tiempo aparto un tiempo para trabajos freelance por medio de sitios como Workana, o uno que otro 'tigrito' que sale por ahi xD.",
 				foto:'/profile.jpg',
 				conocimientos:{
-					php:{'titulo':'PHP','porcentaje':'80'},
+					php:{'titulo':'PHP','porcentaje':'85'},
 					js:{'titulo':'JAVASCRIPT','porcentaje':'70'},
-					jquery:{'titulo':'Jquery','porcentaje':'80'},
+					jquery:{'titulo':'Jquery','porcentaje':'70'},
 					sql:{'titulo':'SQL','porcentaje':'80'},
 					html:{'titulo':'HTML','porcentaje':'90'},
 					git:{'titulo':'GIT','porcentaje':'70'},
 					python:{'titulo':'PYTHON','porcentaje':'50'}
 				},
 				estudios:{
-					primaria:{"tipo":"primaria","institucion": "UEE", "nombre": "Prisco Pérez Monasterios", "grado": "6to grado aprobado"},
-					secundaria:{"tipo":"secundaria","institucion": "LAS", "nombre": "Alberto Smith", "grado": "5to año aprobado"},
-					superior:{"tipo":"superior","institucion": "UNERG", "nombre": "Romulo Gallegos", "grado": "9no semestre aprobado"}
-				}
+					primaria:{"tipo":"Primaria","institucion": "UEE", "nombre": "Prisco Pérez Monasterios", "grado": "6to grado aprobado"},
+					secundaria:{"tipo":"Secundaria","institucion": "LAS", "nombre": "Alberto Smith", "grado": "5to año aprobado"},
+					superior:{"tipo":"Superior","institucion": "UNERG", "nombre": "Romulo Gallegos", "grado": "9no semestre aprobado"}
+				},
+				toggle:false
 			}
 		}
 	}
