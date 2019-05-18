@@ -37,23 +37,27 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="name">Nombres *</label>
-                      <input type="text" v-model="datos_correo.Nombres" required="required" class="form-control">
+                      <input type="text" v-model="datos.nombres" required="required" class="form-control">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="surname">Apellidos *</label>
-                      <input type="text" v-model="datos_correo.Apellidos" name="surname" id="surname" required="required" class="form-control">
+                      <input type="text" v-model="datos.apellidos" name="surname" id="surname" required="required" class="form-control">
                     </div>
                   </div>
                 </div>
+                 <div class="form-group">
+                  <label for="phone">Telefono *</label>
+                  <input type="phone" v-model="datos.telefono" required="required" class="form-control">
+                </div>
                 <div class="form-group">
                   <label for="email">Correo electronico *</label>
-                  <input type="email" v-model="datos_correo.Correo" required="required" class="form-control">
+                  <input type="email" v-model="datos.correo" required="required" class="form-control">
                 </div>
                 <div class="form-group">
                   <label for="message">Mensaje *</label>
-                  <textarea rows="4" v-model="datos_correo.Mensaje" required="required" class="form-control"></textarea>
+                  <textarea rows="4" v-model="datos.mensaje" required="required" class="form-control"></textarea>
                 </div>
                 <div>
                   <input type="submit" @click.prevent="enviarCorreo()" value="Enviar" class="btn btn-outline-primary btn-block">
@@ -68,14 +72,17 @@
 </template>
 <script>
   import {misMixins} from '@/mixins.js'
+  import axios from 'axios'
+
   export default{
     data(){
       return{
-        datos_correo:{
-          Nombres:'Jhonny Jose',
-          Apellidos:'Pérez Martinez',
-          Correo:'jhonnyprz1998@gmail.com',
-          Mensaje:'Hola Mundo'
+        datos:{
+          nombres:'',
+          apellidos:'',
+          correo:'',
+          telefono:'',
+          mensaje:'',
         },
         redes:{
           github:'https://github.com/Yusuke1998',
@@ -90,10 +97,7 @@
     },
     methods:{
       enviarCorreo(){
-        var nombres = this.datos_correo.Nombres+' '+this.Apellidos;
-        var correo = this.this.datos_correo.Correo;
-        var mensaje = this.this.datos_correo.Mensaje;
-        alert('Hola: ' + nombres + correo + mensaje);
+        alert('Esto no funciona wn!');
       }
     },
     mixins: [misMixins]

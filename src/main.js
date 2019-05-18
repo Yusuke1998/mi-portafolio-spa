@@ -1,7 +1,10 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
+import Vue from 'vue';
+import App from './App.vue';
+import router from './router';
+import store from './store';
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
 
 // styles
  import './assets/plantilla/vendor/bootstrap/css/bootstrap.min.css'
@@ -12,16 +15,8 @@ import store from './store'
  import './assets/plantilla/css/custom.css'
  // fin styles
 
-  // import jquery from '../node_modules/jquery/dist/jquery.min.js';
-  // let $ = jquery;
-
-  // $(function(){
-  //   $('[data-toggle="offcanvas"]').click(function () {
-  //      $('.row-offcanvas').toggleClass('active');
-  //   });
-  // });
-
 Vue.config.productionTip = false
+Vue.use(VueAxios, axios);
 
 new Vue({
   router,

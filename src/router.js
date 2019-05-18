@@ -5,6 +5,7 @@ import About from './views/About.vue'
 import Contact from './views/Contact.vue'
 import Detail from './views/Detail.vue'
 import NotFound from './views/NotFound.vue'
+import Proyectos from './components/Proyectos.vue'
 
 Vue.use(Router)
 
