@@ -25,9 +25,9 @@
               <a target="_blank" @click.prevent="showEmail = !showEmail" class="email">
                 <i class="fa fa-envelope"></i>
               </a>
-              <p class="text-center" v-if="showEmail">
-                  {{ redes.correo }}
-              </p>
+              <transition name="correo">
+                <p class="text-center" v-if="showEmail" v-text="redes.correo"></p>
+              </transition>
               <hr>
             </p>
             <h4>Formulario de contacto</h4>
@@ -103,3 +103,34 @@
     mixins: [misMixins]
   }
 </script>
+
+<style>
+.correo-enter-active {
+  animation: correo-in .5s;
+}
+.correo-leave-active {
+  animation: correo-out .5s;
+}
+@keyframes correo-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes correo-out {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+</style>

@@ -9,36 +9,36 @@
   {
   	"id":"2",
     "titulo": "YusukeMovies",
-    "descripcion":"hahaha",
-    "imagen":"ejemplo.jpg",
+    "descripcion":"Pequeño sistema de peliculas, con categorias, años, directores, etc. Gestion por usuario.",
+    "imagen":"/default.jpg",
     "url":"https://www.google.com/"
   },
   {
   	"id":"3",
     "titulo": "Medico Experto",
     "descripcion":"hahaha",
-    "imagen":"ejemplo.jpg",
+    "imagen":"/default.jpg",
     "url":"https://www.google.com/"
   },
     {
   	"id":"4",
     "titulo": "Veterinario Experto",
     "descripcion":"hahaha",
-    "imagen":"ejemplo.jpg",
+    "imagen":"/default.jpg",
     "url":"https://www.google.com/"
   },
   {
   	"id":"5",
     "titulo": "Sistema de Ventas",
     "descripcion":"hahaha",
-    "imagen":"ejemplo.jpg",
+    "imagen":"/default.jpg",
     "url":"https://www.google.com/"
   },
   {
   	"id":"6",
     "titulo": "Inventario",
     "descripcion":"hahaha",
-    "imagen":"ejemplo.jpg",
+    "imagen":"/default.jpg",
     "url":"https://www.google.com/"
   }
 ]

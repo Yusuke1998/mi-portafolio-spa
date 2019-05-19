@@ -1,7 +1,7 @@
 <template>
 	<div class="row">
 		<div class="col-md-6 col-lg-6 grid-item" v-for="item in items"> 
-        	<div class="box-masonry"><a href="#" @click.prevent="detail_p(item.id)" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
+        	<div class="box-masonry"><a href="#" @click.prevent="detail_p(item.id)" class="box-masonry-image with-hover-overlay with-hover-icon">
         		<img v-bind:src="item.imagen" alt="" class="img-fluid"></a>
 	          	<div class="box-masonry-text"> 
 	            	<h4>
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-  import datos from './my-data/data.json';
+import datos from './my-data/data.json';
 
 export default {
   name: 'detalle',
@@ -28,6 +28,11 @@ export default {
   	return{
   		items:datos
   	}
-  }
+  },
+    methods:{
+      detail_p(id){
+        this.$router.push('/DetalleDe/'+id);
+      }
+    }
 }
 </script>

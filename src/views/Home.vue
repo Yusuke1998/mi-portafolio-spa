@@ -15,11 +15,6 @@
       return{
       }
     },
-    methods:{
-      detail_p(id){
-        this.$router.push('/DetalleDe/'+id);
-      }
-    },
     components:{
       proyectos
     }

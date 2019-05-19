@@ -45,9 +45,9 @@
                   <a target="_blank" v-bind:href="redes.github" data-animate-hover="pulse" class="github">
                     <i class="fa fa-github" aria-hidden="true"></i>
                   </a>
-                  <span class="text-center sidebar-p" v-if="showEmail">
-                    {{ redes.correo }}
-                  </span>
+                  <transition name="correo">
+                    <p class="text-center sidebar-p" v-if="showEmail" v-text="redes.correo"></p>
+                   </transition>
                 </p>
 
                 <div class="copyright text-left text-md-left">
@@ -86,3 +86,33 @@
   }
 
 </script>
+<style>
+.correo-enter-active {
+  animation: correo-in .5s;
+}
+.correo-leave-active {
+  animation: correo-out .5s;
+}
+@keyframes correo-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes correo-out {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+</style>
