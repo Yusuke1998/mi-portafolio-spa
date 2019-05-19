@@ -31,36 +31,36 @@
               <hr>
             </p>
             <h4>Formulario de contacto</h4>
-            <form id="contact-form" class="contact-form form">
+            <form id="contact-form" class="contact-form form" @submit.prevent="enviarCorreo()">
               <div class="controls">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="name">Nombres *</label>
-                      <input type="text" v-model="datos.nombres" required="required" class="form-control">
+                      <input type="text" v-model="nombres" class="form-control">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="surname">Apellidos *</label>
-                      <input type="text" v-model="datos.apellidos" name="surname" id="surname" required="required" class="form-control">
+                      <input type="text" v-model="apellidos" name="surname" id="surname" class="form-control">
                     </div>
                   </div>
                 </div>
                  <div class="form-group">
                   <label for="phone">Telefono *</label>
-                  <input type="phone" v-model="datos.telefono" required="required" class="form-control">
+                  <input type="phone" v-model="telefono" class="form-control">
                 </div>
                 <div class="form-group">
                   <label for="email">Correo electronico *</label>
-                  <input type="email" v-model="datos.correo" required="required" class="form-control">
+                  <input type="email" v-model="correo" class="form-control">
                 </div>
                 <div class="form-group">
                   <label for="message">Mensaje *</label>
-                  <textarea rows="4" v-model="datos.mensaje" required="required" class="form-control"></textarea>
+                  <textarea rows="4" v-model="mensaje" class="form-control"></textarea>
                 </div>
                 <div>
-                  <input type="submit" @click.prevent="enviarCorreo()" value="Enviar" class="btn btn-outline-primary btn-block">
+                  <input type="submit" value="Enviar" class="btn btn-outline-primary btn-block">
                 </div>
               </div>
             </form>
@@ -72,33 +72,42 @@
 </template>
 <script>
   import {misMixins} from '@/mixins.js'
+  import network from '../components/my-data/network.json';
   import axios from 'axios'
 
   export default{
     data(){
       return{
-        datos:{
-          nombres:'',
-          apellidos:'',
-          correo:'',
-          telefono:'',
-          mensaje:'',
-        },
-        redes:{
-          github:'https://github.com/Yusuke1998',
-          facebook:'https://www.facebook.com/jhonnyprz1998',
-          twitter:'https://twitter.com/yusukeJJPM',
-          youtube:'https://www.youtube.com/channel/UCR8Qv82YEtiXwkwLV-og13g?view_as=subscriber',
-          correo:'jhonnyjose1998@gmail.com',
-          instagram:'https://www.instagram.com/przjhonny/'
-        },
+        nombres:'',
+        apellidos:'',
+        correo:'',
+        telefono:'',
+        mensaje:'',
+        redes:network[0],
         showEmail:false
       }
     },
     methods:{
       enviarCorreo(){
-        alert('Esto no funciona wn!');
-      }
+          let datos=
+          {
+              name:this.nombres+' '+this.apellidos,
+              phone:this.telefono,
+              email:this.correo,
+              message:this.mensaje
+          };
+
+          alert('Esto aun no funciona!');
+
+          // if (datos.name==''||datos.name=='  '||datos.phone==''||datos.email==''||datos.message=='') {
+          //   alert('Un campo del formulario esta vacio!');
+          // }else{
+          //   // Usar axios para enviar a servidor con php como backend y posteriormente enviarlo por email
+          //   this.axios.get('http://localhost:8000/',{"datos":datos}).then(response=>{
+          //       console.log(response.data);
+          //   });
+          // }
+      },
     },
     mixins: [misMixins]
   }

@@ -5,10 +5,10 @@
 	<div class="col-xl-10">
 	  <div class="content-column-content">
 	    <h1>Acerca de mi</h1>
-	    <p class="lead">{{ descripcion }}</p>
+	    <p class="lead">{{ perfil.descripcion }}</p>
 	    <div class="row">
 	      <div class="col-lg-8">
-	        <p>{{ actualidad }}</p>
+	        <p>{{ perfil.actualidad }}</p>
 		    <p class="skill-item">Habilidades o conocimientos en los que me desempeño</p>
 		    <div v-for="item in conocimientos" class="foreach">
 		        <div class="skill-item">
@@ -22,12 +22,12 @@
 		    </div>
 	      </div>
 	      <div class="col-md-4">
-	        <p><img v-bind:src="foto" alt="Este soy yo!" class="image rounded-circle img-fluid"></p>
+	        <p><img v-bind:src="perfil.foto" alt="Este soy yo!" class="image rounded-circle img-fluid"></p>
 	      </div>
 	    </div>
 	    <h4 class="text-uppercase">Education</h4>
 	    <ul>
-	      <li v-for="item in estudios"><b>{{ item.tipo }}</b> : {{ item.institucion }} / {{ item.nombre }} / {{ item.grado }}</li>
+	      <li v-for="item in perfil.estudios"><b>{{ item.tipo }}</b> : {{ item.institucion }} / {{ item.nombre }} / {{ item.grado }}</li>
 	    </ul>
 	  </div>
 	</div>
@@ -36,28 +36,14 @@
 	<!--   *** ABOUT END ***-->  	
 </template>
 
-<script>	
+<script>
+	import skills from '../components/my-data/skills.json';
+	import profile from '../components/my-data/profile.json';
 	export default{
 		data(){
 			return {
-				yo:'Jhonny Pérez',
-				descripcion:'Estudiante de ing en informatica, fanatico de la electronica y del buen cine. Me gusta el dinero y me gusta programar, por suerte van de la mano.',
-				actualidad:"Estudio en la Universidad Nacional Experimental Romulo Gallegos, la carrera de ingenieria en informatica y actualmente me desempeño ahi como programador para la direccion de informatica. Apoyando las diferentes areas de estudio en tanto me sea posible , al mismo tiempo aparto un tiempo para trabajos freelance por medio de sitios como Workana, o uno que otro 'tigrito' que sale por ahi xD.",
-				foto:'/profile.jpg',
-				conocimientos:{
-					php:{'titulo':'PHP','porcentaje':'85'},
-					js:{'titulo':'JAVASCRIPT','porcentaje':'70'},
-					jquery:{'titulo':'Jquery','porcentaje':'70'},
-					sql:{'titulo':'SQL','porcentaje':'80'},
-					html:{'titulo':'HTML','porcentaje':'90'},
-					git:{'titulo':'GIT','porcentaje':'70'},
-					python:{'titulo':'PYTHON','porcentaje':'50'}
-				},
-				estudios:{
-					primaria:{"tipo":"Primaria","institucion": "UEE", "nombre": "Prisco Pérez Monasterios", "grado": "6to grado aprobado"},
-					secundaria:{"tipo":"Secundaria","institucion": "LAS", "nombre": "Alberto Smith", "grado": "5to año aprobado"},
-					superior:{"tipo":"Superior","institucion": "UNERG", "nombre": "Romulo Gallegos", "grado": "9no semestre aprobado"}
-				},
+				perfil : profile[0],
+				conocimientos : skills[0],
 				toggle:false
 			}
 		}

@@ -26,6 +26,8 @@
                 <h1 class="sidebar-heading"><router-link to="/">Jhonny Pérez</router-link></h1>
                 <p class="sidebar-p text-left" v-text="text1"></p>
                 <p class="sidebar-p text-left" v-text="text2"></p>
+                <p class="sidebar-p text-left" v-text="text3"></p>
+                <p class="sidebar-p text-left" v-text="text4"></p>
                 <p class="social  text-center">
                   <a target="_blank" v-bind:href="redes.facebook" data-animate-hover="pulse" class="external facebook">
                     <i class="fa fa-facebook"></i>
@@ -64,21 +66,19 @@
   </div>
 </template>
 <script>
-  import {misMixins} from '@/mixins.js'
+  import {misMixins} from '@/mixins.js';
+  import network from './components/my-data/network.json';
+  import details from './components/my-data/details.json';
+
   export default{
     data(){
       return{
-        text1:'Venezolano, estudiante y programador.',
-        text2:'Estudiante eterno de las nuevas tecnologias, amante de php y su excelente framework laravel.',
         showEmail:false,
-        redes:{
-          github:'https://github.com/Yusuke1998',
-          facebook:'https://www.facebook.com/jhonnyprz1998',
-          twitter:'https://twitter.com/yusukeJJPM',
-          youtube:'https://www.youtube.com/channel/UCR8Qv82YEtiXwkwLV-og13g?view_as=subscriber',
-          correo:'jhonnyjose1998@gmail.com',
-          instagram:'https://www.instagram.com/przjhonny/'
-        }
+        redes:network[0],
+        text1:details[0].textuno,
+        text2:details[0].textdos,
+        text3:details[0].texttres,
+        text4:details[0].textcuatro,
       }
     },
     mixins: [misMixins]
