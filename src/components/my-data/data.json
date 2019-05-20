@@ -5,46 +5,62 @@
     "descripcion":"Sistema de inventario para la direccion de administracion general de la unerg",
     "imagen":"/dag.png",
     "url":"https://www.google.com/",
-    "herramientas":"laravel, jquery, mysql, bootstrap"
+    "herramientas":"laravel, jquery, mysql, MDBootstrap"
   },
   {
   	"id":"2",
     "titulo": "YusukeMovies",
     "descripcion":"Pequeño sistema de peliculas, con categorias, años, directores, etc. Gestion por usuario.",
-    "imagen":"/default.jpg",
+    "imagen":"/yusukemovies.png",
     "url":"https://www.google.com/",
-    "herramientas":"laravel, jquery, mysql, bootstrap"
+    "herramientas":"laravel, jquery, mysql, bootstrap3"
   },
   {
-  	"id":"3",
-    "titulo": "Medico Experto",
-    "descripcion":"Sistema experto, capaz de brindar tratamientos a enfermedades luego de analizar una serie de datos ingresados por el usuario y de compararlos con su motor de inferencias, o su propia base de datos de conocimiento, la cual es alimentada por conocimiento real de un experto en el tema.",
-    "imagen":"/default.jpg",
+    "id":"3",
+    "titulo": "Sistema Clinico",
+    "descripcion":"Sistema administrativo, que permite el control de citas, historiales, consultas, facturacion, entre otras funcionalidades, tipicas en una clinica privada.",
+    "imagen":"/clinisalud.png",
     "url":"https://www.google.com/",
-    "herramientas":"laravel, jquery, mysql, bootstrap"
-  },
-    {
-  	"id":"4",
-    "titulo": "Veterinario Experto",
-    "descripcion":"Sistema",
-    "imagen":"/default.jpg",
-    "url":"https://www.google.com/",
-    "herramientas":"laravel, jquery, mysql, bootstrap"
+    "herramientas":"laravel, Vuejs, axios, mysql, bootstrap4"
   },
   {
   	"id":"5",
-    "titulo": "Sistema de Ventas",
-    "descripcion":"Sistema",
-    "imagen":"/default.jpg",
+    "titulo": "Veterinario Experto",
+    "descripcion":"Sistema experto basado en reglas capaz de brindar tratamientos a enfermedades comunes y no tan comunes en animales.",
+    "imagen":"/veterianarioexpertoii.png",
     "url":"https://www.google.com/",
-    "herramientas":"laravel, jquery, mysql, bootstrap"
+    "herramientas":"laravel, jquery, mysql, bootstrap4"
   },
   {
   	"id":"6",
-    "titulo": "Inventario",
-    "descripcion":"Sistema",
-    "imagen":"/default.jpg",
+    "titulo": "Sistema de Ventas",
+    "descripcion":"Sistema hecho con laravel y vuejs, elaborado siguiendo el curso de Carlos Arcila Diaz",
+    "imagen":"/ventasvue.png",
     "url":"https://www.google.com/",
-    "herramientas":"laravel, jquery, mysql, bootstrap"
+    "herramientas":"laravel, vue, axios, mysql, bootstrap4"
+  },
+  {
+  	"id":"7",
+    "titulo": "Inventario de bines",
+    "descripcion":"Sistema sencillo de inventario, hecho con programacion estructurada.",
+    "imagen":"/bienesunerg.png",
+    "url":"https://www.google.com/",
+    "herramientas":"php, js, jquery, mysql, bootstrap3"
+  },
+  {
+    "id":"8",
+    "titulo": "Practicas rimorsoft",
+    "descripcion":"Todo tipo de curso realizado bajo la tutoria de Italo Morales siguiendo sus videos de youtube.",
+    "imagen":"/rimorsoftvue.png",
+    "url":"https://www.google.com/",
+    "herramientas":"php, js, jquery, laravel, vuejs, mysql, bootstrap3^"
+  },
+  {
+    "id":"9",
+    "titulo": "Tutoriales varios",
+    "descripcion":"Todo tipo de cursos siguiendo videos de distintos canales de youtube.",
+    "imagen":"/promediovue.png",
+    "url":"https://www.google.com/",
+    "herramientas":"php, js, jquery, laravel, vuejs, mysql, bootstrap3^"
   }
 ]
