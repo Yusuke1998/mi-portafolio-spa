@@ -59,8 +59,12 @@
     "id":"9",
     "titulo": "Tutoriales varios",
     "descripcion":"Todo tipo de cursos siguiendo videos de distintos canales de youtube.",
-    "imagen":"/promediovue.png",
-    "url":"https://www.google.com/",
+    "imagen":{
+      "src":["/promediovue.png","/rimorsoftvue.png"]
+    },
+    "url":{
+      "src":["https://www.google.com/","https://www.google.com/"]
+    },
     "herramientas":"php, js, jquery, laravel, vuejs, mysql, bootstrap3^"
   }
 ]
